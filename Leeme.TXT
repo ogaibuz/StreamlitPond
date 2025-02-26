@@ -1,0 +1,25 @@
+# Para correr el proyecto podemos crear un entorno virtual
+# Un entorno virtual es un directorio que contiene una instalación de Python aislada del sistema principal.
+# Esto permite que puedas instalar paquetes y dependencias específicas para un proyecto sin afectar otros proyectos o el sistema en general.
+# Siempre desde la consola DOS y ubicados en el directorio donde se ecnuentra el archivo de la aplicacion. por ejemplo app.py
+
+python -m venv vponde    	# ---> esto creará un directorio llamado "myenv"
+vponde\Scripts\activate		# ---> escribir eso en la terminal para activar el entorno virtual en Windows
+
+# En la misma terminal tenemos que instalar todos los paquetes
+
+pip install pandas
+pip install numpy
+pip install scikit-learn
+pip install streamlit
+
+# Si el entorno virtual YA EXISTE, solo correr
+vponde\Scripts\activate
+
+# Ahora corremos el proyecto 
+# Streamlit es una biblioteca de Python que se utiliza para crear aplicaciones web
+# para la visualización de datos
+# Al ejecutar el comando "streamlit run", estás iniciando una aplicación web creada con Streamlit
+# Este comando busca el archivo principal de tu aplicación (generalmente un archivo Python) y lo ejecuta en un servidor local
+
+streamlit run app.py
