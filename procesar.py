@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 🔹 Cargar los datos
-df = pd.read_csv("clientes_pagos.csv", sep=';')
+df = pd.read_csv("./CSV/clientes_pagos.csv", sep=';')
 
 # Convertir la fecha con el formato correcto
 df["fecha_factura"] = pd.to_datetime(df["fecha_factura"], format="%m-%d-%Y", errors="coerce")
@@ -22,6 +22,6 @@ df_clientes = df.groupby("codigo_cliente").agg(
 ).reset_index()
 
 # 🔹 Guardar el resultado en un CSV
-df_clientes.to_csv("clientes_clusterizados.csv", index=False)
+df_clientes.to_csv("./CSV/clientes_clusterizados.csv", index=False)
 
 print("✅ Archivo 'clientes_clusterizados.csv' generado con éxito.")
